@@ -10,9 +10,9 @@ Self host runners can be EC2/VM/Containers.
 * It has lot of artifacts to be built and deployed, in case github runners can fail due to resource limitations required to handle the cicd workloads.
 * When security is very essential and it isn't a open source project.
 
-  ### Configure self host runners
+  ## Configure self host runners
 
-  ## Step1:
+  ### Step1:
   **Create EC2 instance**
   1 . Update the security group in EC2.
        * Add inbound rules. Add HTTP **rule**, **source type** (anywhere IPV4 / My IP) . If **source type** is My IP, then include your IP address of github in **Source** option, else choose 0.0.0.0/0.
@@ -20,7 +20,7 @@ Self host runners can be EC2/VM/Containers.
        * Save the inbound rule.
        * Do the same for the outbound, add http and https rules. Save it.
    
-  ## Step 2
+  ### Step 2
   Configure the self hosted runners
   1.  Go to **setting** in github.
   2.  Select **Actions**, then click on **runners** in the left corner.
@@ -30,7 +30,8 @@ Self host runners can be EC2/VM/Containers.
   6.  Connect to the agent with github using  ./run.sh
   7.  You can see the message in the terminal ---> **_listening for jobs_**.
   8.  Modify the github actions file. Go to github --> workflows --> <configuration>.yml file --> Add the below command.
- 
+
+```
 jobs:
  build:
    runs-on: self-hosted
