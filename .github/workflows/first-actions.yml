@@ -4,13 +4,14 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  ### runner machine
 
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: [3.8, 3.9]  ### we have declared,two env, so job will be executed
 
-    steps:
+    steps:  ### This is, we are declaring the stages ####
+    ### below code is from the github doc refer for other projects #####
     - uses: actions/checkout@v3
     - name: Set up Python
       uses: actions/setup-python@v2
