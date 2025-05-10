@@ -17,4 +17,18 @@ Repository to kick start your journey with GitHub Actions
 
 In conclusion, Jenkins is better suited for complex and large-scale automation tasks, while GitHub Actions is a more cost-effective and user-friendly solution for simple to moderate automation needs.
 
+### When to use Github 
+  - If your project is small and for demo purpose.
+  - If you don't want to migrate for project for any other CICD tools (Azure DevOps, GitLab, Jenkins).
+  - If you don't have the self hosted runner, github offer runs and has some limitations of the runtime of CICD jobs.
 
+### concise summary of the runtime limitations for CI/CD jobs in GitHub Actions:
+
+* Job Execution: Max 6 hours on GitHub-hosted runners (configurable, but practically limited on self-hosted too).
+Workflow Run: Max 35 days total.
+Self-Hosted Queue: Jobs queued for self-hosted runners are canceled after 24-48 hours.
+API Requests: Max 1,000 per hour per repository.
+Webhook Events: Max 1500 triggering events per 10 seconds per repository.
+Concurrent Jobs: Limited by your GitHub plan.
+Job Matrix: Max 256 jobs per workflow run.
+Workflow Run Queue: Max 500 queued per 10 seconds per repository.
