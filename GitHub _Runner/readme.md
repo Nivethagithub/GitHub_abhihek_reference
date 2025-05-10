@@ -35,6 +35,7 @@ Self host runners can be EC2/VM/Containers.
 jobs:
  build:
    runs-on: self-hosted
+```
 
 ### How to store the secrets securely
 We can use secrets and variables in Github.
