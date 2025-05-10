@@ -14,7 +14,7 @@ Self host runners can be EC2/VM/Containers.
 
   ## Step1:
   **Create EC2 instance**
-  1. Update the security group in EC2.
+  1 . Update the security group in EC2.
        * Add inbound rules. Add HTTP **rule**, **source type** (anywhere IPV4 / My IP) . If **source type** is My IP, then include your IP address of github in **Source** option, else choose 0.0.0.0/0.
        * Add another rules. Add HTTPS  **rule**, **source type** (anywhere IPV4 / My IP) . If **source type** is My IP, then include your IP address of github in **Source** option, else choose 0.0.0.0/0.
        * Save the inbound rule.
@@ -42,6 +42,6 @@ We can use secrets and variables in Github.
 Create a folder called github/workflows --> create a yaml file (Define the runners, action (push or push, pull request) explain all the stages included.
 
 ### Compare with Jenkins and Github. 
-Jenkins has lot of plugins, in-built integrations  --> **use when your project is a private one.** 
+Jenkins has lot of plugins, in-built integrations. It has good orchestration as well  --> **use when your project is a private one.** 
 GitHub offers free resources to execute the process. The workflow is also simple to write code and use. --> **use when your project is public.** 
   
